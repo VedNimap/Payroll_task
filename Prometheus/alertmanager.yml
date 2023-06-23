@@ -1,0 +1,14 @@
+route:
+  group_by: ['Alertname', 'instance_down', 'recruitment_portal_container_down']
+  # Send all notifications to me.
+  receiver: 'email'
+
+receivers:
+- name: 'email'
+  email_configs:
+  - to: 'vedant@nimapinfotech.com'
+    from: '***************'
+    smarthost: '**********'
+    auth_username: '***************'
+    auth_identity: '***************'
+    auth_password: "********"

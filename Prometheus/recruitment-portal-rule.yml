@@ -1,0 +1,42 @@
+groups:
+- name: recruitment_portal_container_down
+  rules:
+  - alert: ContainerDown_therecruiter-web-qa
+    expr: absent(container_last_seen{name="therecruiter-web-qa"}) == 1
+    labels:
+      severity: warning
+    annotations:
+      summary: "Container is down"
+      description: "Container named therecruiter-web-qa is down."
+
+  - alert: ContainerDown_therecruiter-postgres-qa
+    expr: absent(container_last_seen{name="therecruiter-postgres-qa"}) == 1
+    labels:
+      severity: warning
+    annotations:
+      summary: "Container is down"
+      description: "Container named therecruiter-postgres-qa is down."
+
+  - alert: ContainerDown_therecruiter-redis-qa
+    expr: absent(container_last_seen{name="therecruiter-redis-qa"}) == 1
+    labels:
+      severity: warning
+    annotations:
+      summary: "Container is down"
+      description: "Container named therecruiter-redis-qa is down."
+
+  - alert: ContainerDown_therecruiter-nginx-qa
+    expr: absent(container_last_seen{name="therecruiter-nginx-qa"}) == 1
+    labels:
+      severity: warning
+    annotations:
+      summary: "Container is down"
+      description: "Container named therecruiter-nginx-qa is down."
+
+  - alert: ContainerDown_therecruiter-celery-qa
+    expr: absent(container_last_seen{name="therecruiter-celery-qa"}) == 1
+    labels:
+      severity: warning
+    annotations:
+      summary: "Container is down"
+      description: "Container named therecruiter-celery-qa is down."
