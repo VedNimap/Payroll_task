@@ -177,7 +177,7 @@ server.host: "194.242.56.187"
 # This section was automatically generated during setup.
 elasticsearch.hosts: ['http://194.242.56.187:9200']
 elasticsearch.username: kibana_system
-elasticsearch.password: aRdtV2G1hBVHD0*uo-*n
+elasticsearch.password: ***************
 
 
 #xpack.encryptedSavedObjects.encryptionKey
@@ -192,6 +192,5 @@ elasticsearch.password: aRdtV2G1hBVHD0*uo-*n
     #Used to encrypt session information
     #https://www.elastic.co/guide/en/kibana/current/security-settings-kb.html#security-session-and-cookie-settings
 
-xpack.encryptedSavedObjects.encryptionKey: 1364b93d01f20ee4bba43380cc12a37f
-xpack.reporting.encryptionKey: ba15447588cb755f06c65473f2da0459
-xpack.security.encryptionKey: 42f7545b387a7841fbe6c6b4039412fe
+xpack.encryptedSavedObjects.encryptionKey: ***************
+xpack.reporting.encryptionKey: ***************
