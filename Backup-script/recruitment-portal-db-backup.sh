@@ -30,11 +30,11 @@ media_bkupFolder="media/media-s3-backup_$(date +%Y-%m-%d_%H-%M-%S)"
 DAYS="7"
 
 #delete files older than 7 days
-find "$BACKUP_DIR" -type f -mtime +"$DAYS" -delete
+find "$BACKUP_DIR/db" -type f -mtime +"$DAYS" -delete
 
 #backup commands
 docker exec -t $CONTAINER_NAME pg_dumpall -c -U $PG_USER > $BACKUP_DIR/db/$BACKUP_FILENAME
-#docker cp $CONTAINER_NAME:/media/ $BACKUP_DIR/media/
+docker cp $CONTAINER_NAME:/media/ $BACKUP_DIR/media/
 
 echo "db coppied"
 /usr/local/bin/aws s3 sync $BACKUP_DIR/db/ s3://$BucketName/$db_bkupFolder/
